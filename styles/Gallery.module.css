@@ -1,0 +1,41 @@
+.galleryListContainer {
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.largeImg {
+    width: 100%;
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.modal {
+    width: 100%; 
+    height: 100%; 
+    position: relative;
+}
+
+.close {
+    font-size: 2rem; 
+    top: 0rem;
+    right: -3rem;
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0 1rem;
+}
+
+.modalBackground {
+    background-color: rgba(25, 95, 43, .15);
+    width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}

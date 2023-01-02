@@ -1,0 +1,61 @@
+.ctaImage {
+    width: 205px;
+    height: 205px;
+}
+
+.ctaListContainer {
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.ctaButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1299px) {
+    .ctaListContainer {
+        width: 650px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1rem;
+    }
+
+    .ctaTitle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        line-height: 0;
+    }
+}
+
+@media (max-width: 665px) {
+    .ctaListContainer {
+        width: 450px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .ctaListContainer {
+        min-width: 260px;
+        width: 260px;
+        grid-template-columns: 260px;
+        gap: 2rem 0;
+    }
+
+    .ctaImage {
+        width: 260px;
+        height: 260px;
+    }
+
+    .ctaButtonContainer {
+        width: 100%;
+        display: block;
+    }
+}

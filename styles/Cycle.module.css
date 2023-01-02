@@ -1,0 +1,32 @@
+.cycleRoute {
+    width: 100%; /*Calc(33% - 2rem); */
+    height: 500px; 
+    border: 0;
+}
+
+.routeContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 941px) and (max-width: 1400px) {
+    /* .cycleRoute {
+        width: Calc(50% - 1rem); 
+    } */
+
+    .routeContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+ 
+@media (max-width: 940px) {
+    /* .cycleRoute {
+        width: 100%; 
+    } */
+
+    .routeContainer {
+        grid-template-columns: 1fr;
+    }
+}
