@@ -42,9 +42,7 @@ export default function Lake({data: {
             <div className={ styles.pageContainer }>               
                 <div className={ styles.lakeContainer } >
                     <div className={ styles.para }>
-                        <p>
-                            { para }
-                        </p>
+                        { para }
                     </div>
                     <div className={ styles.lakeData }>
                         { frag('Beach', beach) }

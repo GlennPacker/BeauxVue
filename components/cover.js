@@ -40,6 +40,7 @@ export default function Cover({ data: { src, title, alt, link, textClass = '', p
                         height={400}
                         width={1300}
                         alt={ alt }
+                        priority
                     />
                     <div className={ `${styles.centered} ${ textClass ? styles[textClass] : ''}` }>
                         <h1 className={ styles.title }>{ title }</h1>

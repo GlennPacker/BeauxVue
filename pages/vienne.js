@@ -1,16 +1,13 @@
 import LakePage from "../components/lakePage";
 import Link from 'next/link';
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Lakes and rivers around Bersac Sur Rivalier, Vienne`,
     src: '/Vienne Haute Vienne.jpg',
-    title: 'Vienne',
-    para: 'Haute Vienne',
     textClass: 'vienne',
   },
-  pageTitle: `Vienne - Beaux Vue Chambres d'Hotes`,
-  description: `Vienne, Haute Vienne`,
   cta: {
     items: [
       'fishing',
@@ -24,9 +21,9 @@ const schema = {
   },
   lake: {
     breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers'},
-      { text: 'Vienne'},
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Vienne' },
     ],
     beach: false,
     cycling: true,
@@ -40,16 +37,16 @@ const schema = {
     gallery: [{
       src: '/View from a bridge showing Vienne and another bridge.jpg',
       alt: 'View from a bridge showing Vienne and another bridge'
-    },{
+    }, {
       src: '/View through tunnel onto the Viene.jpg',
       alt: 'View through a tunnel onto the Viene'
     }, {
       src: '/Vienne slipway.jpg',
       alt: 'Vienne slipway in Confolens'
-    },{
+    }, {
       src: '/Viene Waterfall.jpg',
       alt: 'Viene Waterfall - Beaux Vue',
-    },{
+    }, {
       src: '/bridge over the Vienne.jpg',
       alt: 'Bridge over the Vienne',
     }, {
@@ -58,9 +55,9 @@ const schema = {
     }, {
       src: '/Confolens across the Vienne.jpg',
       alt: 'Confolens across the Vienne'
-    }, 
+    },
     ],
-    para: 
+    para:
       <>
         <p>
         </p>
@@ -68,8 +65,20 @@ const schema = {
   }
 }
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
+
 export default function Vienne() {
-  return (
-    <LakePage schema={schema} />
+  const schema = pageService.mapSchema(
+    data,
+    'vienne',
+    useTranslations('pages')
   );
+
+  return (<LakePage schema={schema} />);
 }

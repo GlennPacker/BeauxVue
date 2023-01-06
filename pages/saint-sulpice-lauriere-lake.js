@@ -1,15 +1,12 @@
 import LakePage from "../components/lakePage";
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Saint Sulpice Laurière Lac, Haute Vienne near Bersac Sur Rivalier`,
     src: '/Saint-Sulpice-Laurière-Lac.jpg',
-    title: 'Saint Sulpice Laurière Lac',
-    para: 'Haute Vienne',
     textClass: 'saint-sulpice-lauriere',
   },
-  pageTitle: `Saint Sulpice Laurière Lac - Beaux Vue Chambres d'Hotes`,
-  description: `Saint Sulpice Laurière Lac, Haute Vienne`,
   cta: {
     minHeight: 135,
     items: [
@@ -23,9 +20,9 @@ const schema = {
   },
   lake: {
     breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers'},
-      { text: 'Saint Sulpice Laurière'},
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Saint Sulpice Laurière' },
     ],
     beach: false,
     cycling: false,
@@ -42,10 +39,10 @@ const schema = {
     }, {
       alt: 'Saint Sulpice Laurière, Laurière, Haute Vienne',
       src: '/Saint Sulpice Laurière Laurière Haute Vienne.jpg',
-    },{
+    }, {
       alt: 'Saint Sulpice Laurière Lac, Beaux Vuex',
       src: '/Saint Sulpice Laurière - Beaux Vuex.jpg',
-    },{
+    }, {
       src: '/Saint Sulpice Laurière - Near Beaux Vue.jpg',
       alt: 'Saint Sulpice Laurière - Near Beaux Vue',
     }, {
@@ -59,7 +56,7 @@ const schema = {
       alt: 'Saint Sulpice Laurière - Fishing Bank.jpg',
     }
     ],
-    para: 
+    para:
       <>
         <h6>Fishing on the pond La Papeterie</h6>
         <p>
@@ -69,8 +66,20 @@ const schema = {
   }
 }
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
+
 export default function SaintSulpiceLauriere() {
-  return (
-    <LakePage schema={schema} />
+  const schema = pageService.mapSchema(
+    data,
+    'saintSulpiceLauriereLake',
+    useTranslations('pages')
   );
+
+  return (<LakePage schema={schema} />);
 }

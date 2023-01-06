@@ -2,17 +2,14 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CtaList from '../components/ctaList';
 import Cover from '../components/cover';
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Beaux Vue Chambres d'Hotes Bersac Sur Rivalier`,
     src: '/bersac chambres dhotes.jpg',
-    title: 'Beaux Vue',
-    para: 'Luxury B&B Accomodation',
     textClass: 'home',
   },
-  pageTitle: `Beaux Vue Chambres d'Hotes`,
-  description: `Beaux Vue Chambres d'Hotes Bersac Sur Rivalier, Bessines sur Gartempe, Limoges, Haute Vienne`,
   cta: {
     minHeight: 150,
     items: [
@@ -26,34 +23,34 @@ const schema = {
   }
 }
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
+
 export default function Home() {
-    return (
-        <>
-          <Head>
-            <title>{ schema.pageTitle }</title>
-            <meta name="description" content={ schema.description } />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+  const schema = pageService.mapSchema(
+    data,
+    'home',
+    useTranslations('pages')
+  );
 
-          <Cover data={schema.cover} />
-          <main className={styles.main }>
-            <CtaList ctaData={schema.cta}></CtaList>
-          </main>
+  return (
+    <>
+      <Head>
+        <title>{schema.pageTitle}</title>
+        <meta name="description" content={schema.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-          
-          {/* <footer className={styles.footer}>
-              contact
-              <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-              Powered by{' '}
-              <span className={styles.logo}>
-                  <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-              </span>
-              </a>
-          </footer> */}
-        </>
-    );
+      <Cover data={schema.cover} />
+
+      <main className={styles.main}>
+        <CtaList ctaData={schema.cta}></CtaList>
+      </main>
+    </>
+  );
 }

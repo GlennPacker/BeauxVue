@@ -1,8 +1,0 @@
-.tagContainer {
-    display: flex;
-    flex-direction: row;
-}
-
-.tagElement {
-    display: inline;
-}

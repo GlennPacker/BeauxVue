@@ -3,49 +3,60 @@ import styles from '../styles/Home.module.css'
 import CtaList from '../components/ctaList';
 import Cover from '../components/cover';
 import BreadCrumb from '../components/breadBrumb';
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Watersports Haute Vienne and Nouvelle Aquitaine`,
     src: '/Watersports Haute Vienne and Nouvelle Aquitaine.jpg',
-    title: 'Flying Water Sports',
     textClass: 'watersports',
-    para: 'Beaux Vue Water Sports In Bersac Sur Rivalier'
   },
-  pageTitle: `Beaux Vue Chambres d'Hotes - Flying Water Sports`,
-  description: `Beaux Vue Chambres d'Hotes Bersac Sur Rivalier Watersports Activity Centre`,
   breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-    { text: 'Water Sports'}
+    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+    { text: 'Water Sports' }
   ],
   cta: {
-      items: [
-        'lakesAndRivers',
-        'waterSportsRental',
-        'sup',
-        'kayaking',
-        'wingSurfing',
-        'windsurfing',
-      ],
-      minHeight: 135
+    items: [
+      'lakesAndRivers',
+      'waterSportsRental',
+      'sup',
+      'kayaking',
+      'wingSurfing',
+      'windsurfing',
+    ],
+    minHeight: 135
+  }
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
     }
+  };
 }
 
 export default function Watersports() {
-    return (
-        <>
-          <Head>
-            <title>{ schema.pageTitle }</title>
-            <meta name="description" content={ schema.description } />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+  const schema = pageService.mapSchema(
+    data,
+    'waterSports',
+    useTranslations('pages')
+  );
 
-          <Cover data={schema.cover} />
-          <BreadCrumb  breadCrumb={ schema.breadCrumb } />
+  return (
+    <>
+      <Head>
+        <title>{schema.pageTitle}</title>
+        <meta name="description" content={schema.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-          <main className={styles.main }>
-            <CtaList ctaData={schema.cta}></CtaList>
-          </main>
-        </>
-    );
+      <Cover data={schema.cover} />
+      <BreadCrumb breadCrumb={schema.breadCrumb} />
+
+      <main className={styles.main}>
+        <CtaList ctaData={schema.cta}></CtaList>
+      </main>
+    </>
+  );
 }

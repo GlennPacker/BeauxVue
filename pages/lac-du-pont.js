@@ -1,16 +1,13 @@
 import LakePage from "../components/lakePage";
 import Link from 'next/link';
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Lakes and rivers around Bersac Sur Rivalier, Lac Du Pont, Haute Vienne`,
     src: '/Lac Du Pont.jpg',
-    title: 'Lac Du Pont',
-    para: 'Lac Du Pont, Haute Vienne',
     textClass: 'lac-du-pont',
   },
-  pageTitle: `Lac Du Pont - Beaux Vue Chambres d'Hotes`,
-  description: `Lac Du Pont, Laurière, Lau Haute Vienne`,
   cta: {
     items: [
       'fishing',
@@ -24,9 +21,9 @@ const schema = {
   },
   lake: {
     breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers'},
-      { text: 'Lac Du Pont'},
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Lac Du Pont' },
     ],
     beach: true,
     cycling: true,
@@ -43,10 +40,10 @@ const schema = {
     }, {
       alt: 'Lac Du Pont, Laurière, Haute Vienne',
       src: '/Lac Du Pont Laurière Haute Vienne.jpg',
-    },{
+    }, {
       src: '/Lac Du Pont - Near Beaux Vue.jpg',
       alt: 'Lac Du Pont - Near Beaux Vue',
-    },{
+    }, {
       src: '/Lac Du Pont - by flying water sports.jpg',
       alt: 'Lac Du Pont - by flying water sports'
     }, {
@@ -55,20 +52,20 @@ const schema = {
     }, {
       src: '/Lac Du Pont near Bersac Sur Rivalier.jpg',
       alt: 'Lac Du Pont - near Bersac Sur Rivalier'
-    },{
+    }, {
       src: '/Lac Du Pont - water sports.jpg',
       alt: 'Lac Du Pont',
-    }, 
+    },
     ],
-    para: 
+    para:
       <>
         <p>
           The largest lake in the area (330 hectares) just 15 mins away from Beaux Vue Chambres d{"'"}Hotes. The lake was created in 1968 and inaugurated in 1977.
         </p>
         <p>
-          It offers everything you could wish for in a lake from <Link href="/fishing">fishing</Link>, <Link href='/watersports'>watersports</Link>. 
-          Land based activitites there is a 25.4km 
-          <Link href="https://www.alltrails.com/trail/france/haute-vienne/tour-du-lac-de-saint-pardoux#:~:text=Check%20out%20this%2015.8%2Dmile,h%2014%20min%20to%20complete." > route </Link> 
+          It offers everything you could wish for in a lake from <Link href="/fishing">fishing</Link>, <Link href='/watersports'>watersports</Link>.
+          Land based activitites there is a 25.4km
+          <Link href="https://www.alltrails.com/trail/france/haute-vienne/tour-du-lac-de-saint-pardoux#:~:text=Check%20out%20this%2015.8%2Dmile,h%2014%20min%20to%20complete." > route </Link>
           great for <Link href="/trekking">trekking</Link> and <Link href="/cycling">cycling</Link>.
         </p>
         <p>
@@ -78,8 +75,20 @@ const schema = {
   }
 }
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
+
 export default function LacDuPont() {
-  return (
-    <LakePage schema={schema} />
+  const schema = pageService.mapSchema(
+    data,
+    'lacDuPontàLÂge',
+    useTranslations('pages')
   );
+
+  return (<LakePage schema={schema} />);
 }

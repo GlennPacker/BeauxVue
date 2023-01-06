@@ -3,65 +3,67 @@ import styles from '../styles/Home.module.css'
 import CtaList from '../components/ctaList';
 import Cover from '../components/cover';
 import BreadCrumb from '../components/breadBrumb';
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Beaux Vue Chambres d'Hotes Bersac Sur Rivalier`,
     src: '/bersac chambres dhotes.jpg',
-    title: 'Beaux Vue',
-    para: 'Luxury B&B Accomodation',
     textClass: 'home',
   },
-  pageTitle: `Beaux Vue Chambres d'Hotes`,
-  description: `Beaux Vue Chambres d'Hotes Bersac Sur Rivalier, Bessines sur Gartempe, Limoges, Haute Vienne`,
   cta: {
     minHeight: 150,
     items: [
-      'accomodation',
       'local',
+      'watersports',
       'trekking',
       'crafts',
       'paragliding',
       'xmass',
+      'cycling',
+      'fishing',
+      'kayaking',
+      'sup',
+      'windsurfing',
+      'wingSurfing'
     ]
   },
   breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-    { text: 'More Activities'}
+    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+    { text: 'More Activities' }
   ]
 }
 
-export default function Accomodation() {
-    return (
-        <>
-          <Head>
-            <title>{ schema.pageTitle }</title>
-            <meta name="description" content={ schema.description } />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
 
-          <Cover data={schema.cover} />
+export default function MoreActivities() {
+  const schema = pageService.mapSchema(
+    data,
+    'moreActivities',
+    useTranslations('pages')
+  );
 
-          <BreadCrumb  breadCrumb={ schema.breadCrumb } />
+  return (
+    <>
+      <Head>
+        <title>{schema.pageTitle}</title>
+        <meta name="description" content={schema.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-          <main className={styles.main }>
-            <CtaList ctaData={schema.cta}></CtaList>
-          </main>
+      <Cover data={schema.cover} />
 
-          
-          {/* <footer className={styles.footer}>
-              contact
-              <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-              Powered by{' '}
-              <span className={styles.logo}>
-                  <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-              </span>
-              </a>
-          </footer> */}
-        </>
-    );
+      <BreadCrumb breadCrumb={schema.breadCrumb} />
+
+      <main className={styles.main}>
+        <CtaList ctaData={schema.cta}></CtaList>
+      </main>
+    </>
+  );
 }
