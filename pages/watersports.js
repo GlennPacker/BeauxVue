@@ -5,28 +5,7 @@ import Cover from '../components/cover';
 import BreadCrumb from '../components/breadBrumb';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
-
-const data = {
-  cover: {
-    src: '/Watersports Haute Vienne and Nouvelle Aquitaine.jpg',
-    textClass: 'watersports',
-  },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Water Sports' }
-  ],
-  cta: {
-    items: [
-      'lakesAndRivers',
-      'waterSportsRental',
-      'sup',
-      'kayaking',
-      'wingSurfing',
-      'windsurfing',
-    ],
-    minHeight: 135
-  }
-}
+import data from '../services/dataService';
 
 export async function getStaticProps({ locale }) {
   return {

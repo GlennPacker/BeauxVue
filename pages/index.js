@@ -4,24 +4,7 @@ import CtaList from '../components/ctaList';
 import Cover from '../components/cover';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
-
-const data = {
-  cover: {
-    src: '/bersac chambres dhotes.jpg',
-    textClass: 'home',
-  },
-  cta: {
-    minHeight: 150,
-    items: [
-      'accomodation',
-      'local',
-      'watersports',
-      'fishing',
-      'cycling',
-      'moreActivities',
-    ]
-  }
-}
+import data from '../services/dataService';
 
 export async function getStaticProps({ locale }) {
   return {
