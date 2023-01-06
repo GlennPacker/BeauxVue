@@ -1,0 +1,25 @@
+{
+    "cta": {
+        "accomodation": {
+            "title": "Hébergement",
+            "alt": "Beax Vue Chambres d'Hotes Bersac Sur Rivalier",
+            "para": "Chambres d'hôtes de luxe en chambres doubles, twins et familiales."
+        },
+        "crafts": {
+            "alt": "Artisanat - Bersac Sur Rivalier",
+            "para": "",
+            "title": "Artisanat"
+        },
+        "cycling": {
+            "alt": "Vélo Limoges, Haute Vienne et Limousin",
+            "para": "",
+            "title": "Cyclisme"
+        },
+        "fishing": {
+            "alt": "Faire de la pêche Limoges, Haute Vienne",
+            "buttonText": "Pêche",
+            "para": "",
+            "title": "Faire de la pêche"
+        }
+    }
+}

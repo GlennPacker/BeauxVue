@@ -1,15 +1,12 @@
 import LakePage from "../components/lakePage";
+import { useTranslations } from 'use-intl';
+import pageService from '../services/pageService';
 
-const schema = {
+const data = {
   cover: {
-    alt: `Gartempe, Haute Vienne near Bersac Sur Rivalier`,
     src: '/Gartempe.jpg',
-    title: 'Gartempe',
-    para: 'Haute Vienne and Nouvelle Aquitaine',
     textClass: 'gartempe',
   },
-  pageTitle: `Gartempe - Beaux Vue Chambres d'Hotes`,
-  description: `Gartempe, Haute Vienne`,
   cta: {
     minHeight: 135,
     items: [
@@ -23,9 +20,9 @@ const schema = {
   },
   lake: {
     breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/'},
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers'},
-      { text: 'Gartempe'},
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Gartempe' },
     ],
     beach: false,
     cycling: true,
@@ -39,15 +36,15 @@ const schema = {
     gallery: [{
       alt: 'Gartempe, Haute Vienne',
       src: '/Gartempe, Haute Vienne.jpg',
-    },{
+    }, {
       src: '/Gartempe - Near Beaux Vue.jpg',
       alt: 'Gartempe - Near Beaux Vue',
-    },{
+    }, {
       src: '/Gartempe - by flying water sports.jpg',
       alt: 'Gartempe - by flying water sports'
     },
     ],
-    para: 
+    para:
       <>
         <p>
         </p>
@@ -55,8 +52,20 @@ const schema = {
   }
 }
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
+}
+
 export default function Gartempe() {
-  return (
-    <LakePage schema={schema} />
+  const schema = pageService.mapSchema(
+    data,
+    'gartempe',
+    useTranslations('pages')
   );
+
+  return (<LakePage schema={schema} />);
 }

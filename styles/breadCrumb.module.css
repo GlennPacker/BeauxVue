@@ -1,5 +1,16 @@
 .breadcrumbContainer {
-    display: flex;
-    flex-direction: row;
-    /* gap: 10px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.hyper {
+  color: #195f2b;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 470px) {
+  .breadcrumbContainer {
+    flex-direction: column;
+  }
 }

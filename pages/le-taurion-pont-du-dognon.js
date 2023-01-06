@@ -4,42 +4,44 @@ import pageService from '../services/pageService';
 
 const data = {
   cover: {
-    src: '/lakes-and-rivers-france.jpg',
-    textClass: 'lakes-and-rivers',
+    src: '',
+    textClass: 'le-taurion-pont-du-dognon',
   },
   cta: {
     minHeight: 135,
     items: [
       'accomodation',
       'fishing',
-      'watersports',
-      'cycling',
-      'trekking',
-      'moreActivities',
+      'sup',
+      'kayaking',
+      'wingSurfing',
+      'windsurfing',
     ]
   },
   lake: {
     breadCrumb: [
       { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
       { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Etang De Jonas' },
+      { text: 'Le Taurion, Châtelus le Marcheix' },
     ],
-    beach: false,
-    cycling: false,
+    beach: true,
+    cycling: true,
     fishing: true,
-    inflatables: false,
-    kayaking: false,
-    swimming: false,
-    trekking: false,
-    windsurfing: false,
-    wingSurfAndFoil: false,
-    gallery: [],
-    para:
-      <>
-        <p>
-        </p>
-      </>
-  }
+    inflatables: true,
+    kayaking: true,
+    swimming: true,
+    trekking: true,
+    windsurfing: true,
+    wingSurfAndFoil: true,
+    gallery: [
+    ],
+  },
+
+  para:
+    <>
+      <p>
+      </p>
+    </>
 }
 
 export async function getStaticProps({ locale }) {
@@ -50,10 +52,10 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-export default function EtangDeJonas() {
+export default function LeTaurionPontDuDognon() {
   const schema = pageService.mapSchema(
     data,
-    'etangDeJonas',
+    'leTaurionPontDuDognon',
     useTranslations('pages')
   );
 

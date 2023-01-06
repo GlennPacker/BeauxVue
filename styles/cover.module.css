@@ -1,28 +1,27 @@
-
 .centered {
-    padding-left: .5rem;
+  padding-left: .5rem;
 }
 
 .image {
-    width: 100%;
-    height: 125px;
-    position: relative;
-    bottom: 39px;
+  width: 100%;
+  height: 125px;
+  position: relative;
+  bottom: 39px;
 }
 
 .flagContainer {
-    float: right;
-    z-index: 20;
-    position: relative;
+  float: right;
+  z-index: 20;
+  position: relative;
 }
 
 .flag {
-    height: 39px;
-    width: 75px;
+  height: 39px;
+  width: 75px;
 }
 
 .title {
-    margin: 0;
+  margin: 0;
 }
 
 .watersports,
@@ -33,324 +32,348 @@
 .lac-du-pont,
 .lakes-and-rivers,
 .home {
-    color: white;
+  color: white;
 }
 
 @media (max-width: 469px) {
-    .la-jonchere-saint-maurice h1 {
-        font-size: 30px;    
-    }
+  .la-jonchere-saint-maurice h1 {
+    font-size: 30px;
+  }
 
-    .vienne,
-    .la-jonchere-saint-maurice,
-    .marcheix,
-    .saint-sulpice-lauriere,
-    .etang-de-sagnat,
-    .gartempe,
-    .lac-du-pont,
-    .watersports,
-    .lakes-and-rivers,
-    .lac-de-saint-pardoux,
-    .home {
-        background-color: inherit;
-        color: inherit;
-        font-weight: inherit;
-    }
+  .vienne,
+  .la-jonchere-saint-maurice,
+  .marcheix,
+  .saint-sulpice-lauriere,
+  .etang-de-sagnat,
+  .gartempe,
+  .lac-du-pont,
+  .watersports,
+  .lakes-and-rivers,
+  .lac-de-saint-pardoux,
+  .home {
+    background-color: inherit;
+    color: inherit;
+    font-weight: inherit;
+  }
 }
 
 @media (min-width: 470px) {
-    .la-jonchere-saint-maurice {
-        top: 0;
-        left: 0;
-        color: black;
-        background-color: rgba(255,255,255,.5);
-        transform: translate(0%, 0%) !important;
-        border-bottom-right-radius: 8px;
-    }
+  .la-jonchere-saint-maurice {
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: rgba(255, 255, 255, .5);
+    transform: translate(0%, 0%) !important;
+    border-bottom-right-radius: 8px;
+  }
 
-    .lakes-and-rivers {
-        top: 60%;
-        left: 35%;
-    }
+  .lakes-and-rivers {
+    top: 40%;
+    left: 5%;
+    transform: translate(0%, 0%) !important;
+  }
 
-    .lac-du-pont,
-    .home {
-        top: 70%;
-        left: 25%;
-    }
+  .lac-du-pont {
+    top: 40%;
+    left: 5%;
+    transform: translate(0%, 0%) !important;
+  }
 
-    .marcheix {
-        top: 34%;
-        right: 4%;
-        transform: translate(0%, 0%) !important;
-    }
+  .home {
+    top: 70%;
+    left: 25%;
+  }
 
-    .vienne,
-    .saint-sulpice-lauriere,
-    .etang-de-sagnat {
-        top: 18%;
-        left: 13%;
-        transform: translate(0%, 0%) !important;
-    }
-    
-    .gartempe {
-        top: 23%;
-        left: 40%;
-    }
+  .marcheix {
+    top: 34%;
+    right: 4%;
+    transform: translate(0%, 0%) !important;
+  }
 
-    .lac-de-saint-pardoux {
-        top: 20%;
-        left: 35%;
-    }
+  .vienne,
+  .saint-sulpice-lauriere,
+  .etang-de-sagnat {
+    top: 18%;
+    left: 13%;
+    transform: translate(0%, 0%) !important;
+  }
 
-    .centered {
-        padding: .5rem;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }    
+  .gartempe {
+    top: 60%;
+    left: 30%;
+  }
 
-    .watersports {    
-        background-color: inherit;
-        color: inherit;
-        font-weight: inherit;
-        position: static;
-        transform: translate(0, 0);
-    }
-    
-    .imageContainer {
-        position: relative;
-    }
+  .lac-de-saint-pardoux {
+    top: 20%;
+    left: 35%;
+  }
 
-    .title {
-        font-size: 1.5rem;
-    }    
-    .image {
-        height: 150px;
-    }
+  .centered {
+    padding: .5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .watersports {
+    background-color: inherit;
+    color: inherit;
+    font-weight: inherit;
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .imageContainer {
+    position: relative;
+    margin-bottom: -2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    height: 150px;
+  }
 }
 
 @media (min-width: 650px) {
-    .la-jonchere-saint-maurice {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 0;
-    }
+  .la-jonchere-saint-maurice {
+    top: auto;
+    bottom: 2rem;
+    left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0;
+  }
 
-    .image {
-        height: 220px;
-    }
+  .image {
+    height: 220px;
+  }
 
-    .marcheix {
-        top: 35%;
-        right: 12%;
-    }
+  .marcheix {
+    top: 35%;
+    right: 12%;
+  }
 
-    .gartempe {
-        top: 31%;
-        left: 38%;
-    }
+  .gartempe {
+    top: 67%;
+    left: 25%;
+  }
 
-    .vienne,
-    .saint-sulpice-lauriere,
-    .etang-de-sagnat {
-        top: 25%;
-        left: 13%;
-    }
+  .vienne,
+  .saint-sulpice-lauriere,
+  .etang-de-sagnat {
+    top: 25%;
+    left: 13%;
+  }
 
-    .lakes-and-rivers {
-        top: 55%;
-        left: 28%;
-    }
+  .lakes-and-rivers {
+    top: 55%;
+    left: 28%;
+  }
 
-    .lac-du-pont {
-        top: 70%;
-        left: 20%;
-    }
+  .lac-du-pont {
+    top: 52%;
+    left: 1rem;
+  }
 
-    .home {
-        top: 65%;
-        left: 22%;
-    }
+  .home {
+    top: 65%;
+    left: 22%;
+  }
 
-    .lac-de-saint-pardoux {
-        top: 23%;
-        left: 27%;
-    }
+  .lac-de-saint-pardoux {
+    top: 23%;
+    left: 27%;
+  }
 
-    .title {
-        font-size: 1.7rem;
-    }
+  .title {
+    font-size: 1.7rem;
+  }
 
-    .watersports {    
-        position: absolute;
-        transform: translate(0, 0);
-        bottom: 0%;
-        right: 5%;
-        color: white;
-    }
+  .watersports {
+    position: absolute;
+    transform: translate(0, 0);
+    bottom: 10%;
+    right: 5%;
+    color: white;
+  }
 
-    .watersports div {
-        font-weight: 700;
-    }
+  .watersports div {
+    font-weight: 700;
+  }
 }
 
 @media (min-width: 1024px) {
-    .la-jonchere-saint-maurice {
-        bottom: 1rem;
-        left: 1rem;
-        border-radius: 8px;
-        background-color: rgba(255,255,255,.4);
-    }
+  .la-jonchere-saint-maurice {
+    bottom: 2rem;
+    left: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .4);
+  }
 
-    .etang-de-sagnat {
-        top: 30%;
-        left: 18%;
-    }
+  .etang-de-sagnat {
+    top: 30%;
+    left: 18%;
+  }
 
-    .marcheix {
-        top: 45%;
-        right: 20%;
-    }
+  .marcheix {
+    top: 45%;
+    right: 20%;
+  }
 
-    .image {
-        height: 300px;
-    }
+  .image {
+    height: 300px;
+  }
 
-    .home {
-        top: 55%;
-        left: 18%;
-    }
+  .home {
+    top: 55%;
+    left: 18%;
+  }
 
-    .gartempe {
-        top: 77%;
-        left: 16%;
-    }
+  .gartempe {
+    top: 73%;
+    left: 15%;
+  }
 
-    .lac-du-pont {
-        top: 75%;
-        left: 14%;
-    }
+  .lac-du-pont {
+    top: 60%;
+  }
 
-    .lakes-and-rivers {
-        top: 45%;
-        left: 20%;
-    }
+  .lakes-and-rivers {
+    top: 60%;
+    left: 27%;
+  }
 
-    .lac-de-saint-pardoux {
-        top: 23%;
-        left: 20%;
-    }
+  .lac-de-saint-pardoux {
+    top: 23%;
+    left: 20%;
+  }
 
-    .title {
-        font-size: 2rem;
-    }
+  .title {
+    font-size: 2rem;
+  }
 
-    .watersports div {
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
+  .vienne {
+    top: 29%;
+    left: 13%;
+  }
 
-    .watersports { 
-        right: 2%;
-    }
+  .watersports div {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .watersports {
+    right: 2%;
+  }
 }
 
 @media (min-width: 1300px) {
-    .la-jonchere-saint-maurice {
-        bottom: 1.7rem;
-        left: 1.7rem;
-        border-radius: 8px;
-        background-color: rgba(255,255,255,0.2);
-    }
+  .la-jonchere-saint-maurice {
+    bottom: 2.7rem;
+    left: 1.7rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
-    .image {
-        height: 350px;
-    }
+  .image {
+    height: 350px;
+  }
 
-    .home {
-        top: 55%;
-        left: 25%;
-    }
+  .home {
+    top: 55%;
+    left: 25%;
+  }
 
-    .title {
-        font-size: 3rem;
-    }
+  .title {
+    font-size: 3rem;
+  }
 
-    .gartempe {
-        top: 80%;
-        left: 12%;
-    }
+  .gartempe {
+    top: 69%;
+    left: 42%;
+  }
 
-    .lac-de-saint-pardoux {
-        top: 22%;
-        left: 22%;
-    }
+  .lac-de-saint-pardoux {
+    top: 22%;
+    left: 22%;
+  }
 }
 
 @media (min-width: 2000px) {
-    .la-jonchere-saint-maurice {
-        bottom: 8%;
-        left: 5%;
-        background-color: rgba(255,255,255,0.2);
-    }
+  .la-jonchere-saint-maurice {
+    bottom: 8%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
-    .image {
-        height: 400px;
-    }
+  .image {
+    height: 400px;
+  }
 
-    .home {
-        top: 55%;
-        left: 25%;
-    }
+  .home {
+    top: 55%;
+    left: 25%;
+  }
 
-    .title {
-        font-size: 3rem;
-    }
+  .title {
+    font-size: 3rem;
+  }
 
-    .lac-du-pont {
-        top: 70%;
-        left: 10%;
-    }
-    
-    .marcheix {
-        right: 25%;
-    }
+  .gartempe {
+    top: 72%;
+    left: 42%;
+  }
 
-    
-    .watersports div {
-        font-weight: 500;
-        font-size: 1.4rem;
-    }
+  .lac-du-pont {
+    left: 2rem;
+  }
 
-    .watersports { 
-        right: 5%;
-    }
+  .marcheix {
+    right: 25%;
+  }
+
+  .vienne {
+    top: 42%;
+    left: 18%;
+  }
+
+  .watersports div {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .watersports {
+    right: 5%;
+  }
 }
 
 @media (min-width: 3000px) {
-    .la-jonchere-saint-maurice {
-        bottom: 7%;
-        left: 25%;
-        background-color: rgba(255,255,255,0.15);
-    }
+  .la-jonchere-saint-maurice {
+    bottom: 7%;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 
-    .image {
-        height: 500px;
-    }
+  .image {
+    height: 500px;
+  }
 
-    .title {
-        font-size: 4rem;
-    }
+  .title {
+    font-size: 4rem;
+  }
 
-    .gartempe {
-        top: 80%;
-        left: 7%;
-    }
+  .gartempe {
+    top: 80%;
+    left: 7%;
+  }
+
+  .lac-du-pont {
+    left: 4rem;
+  }
+
+  .vienne {
+    top: 45%;
+    left: 23%;
+  }
 }
-
-
-
-
-
