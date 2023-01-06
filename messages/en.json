@@ -151,7 +151,7 @@
   },
   "pages": {
     "all": {
-      "cover": {
+      "header": {
         "alt": "{name} {atNear} Beaux Vue Chambres d'Hotes Bersac Sur Rivalier"
       },
       "pageTitle": "{name} {atNear} Beaux Vue Chambres d'Hotes Bersac Sur Rivalier",
@@ -160,7 +160,7 @@
     "accomodation": {
       "title": "Accomodation",
       "atNear": "at",
-      "cover": {
+      "header": {
         "title": "Beaux Vue",
         "para": "Luxury B&B Accomodation"
       }
@@ -168,7 +168,7 @@
     "home": {
       "title": "",
       "atNear": "",
-      "cover": {
+      "header": {
         "title": "Beaux Vue",
         "para": "Luxury B&B Accomodation"
       }
@@ -176,7 +176,7 @@
     "cycling": {
       "title": "Cycling",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Beaux Vue",
         "para": "Luxury B&B Accomodation"
       }
@@ -184,7 +184,7 @@
     "etangDeJonas": {
       "title": "Étang De Jonas",
       "atNear": "lakes and rivers around",
-      "cover": {
+      "header": {
         "title": "Étang De Jonas",
         "para": "Haute Vienne and Nouvelle Aquitaine"
       }
@@ -192,7 +192,7 @@
     "etangDeSagnat": {
       "title": "Étang De Sagnat",
       "atNear": "lakes and rivers around",
-      "cover": {
+      "header": {
         "title": "Étang De Sagnat",
         "para": "Etang de Sagnat,  Bessines Sur Gartempe, Haute Vienne"
       }
@@ -200,7 +200,7 @@
     "fishing": {
       "title": "Fishing",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Fishing ",
         "para": "Around Beaux Vue and Limousin"
       }
@@ -208,7 +208,7 @@
     "gartempe": {
       "title": "Gartempe",
       "atNear": "lakes and rivers near",
-      "cover": {
+      "header": {
         "title": "Gartempe ",
         "para": "Haute Vienne and Nouvelle Aquitaine"
       }
@@ -216,7 +216,7 @@
     "kayaking": {
       "title": "Kayaking",
       "atNear": "by Flying Water Sports at",
-      "cover": {
+      "header": {
         "title": "Kayaking ",
         "para": "Haute Vienne and Limousin"
       }
@@ -224,7 +224,7 @@
     "lacDeSaintPardoux": {
       "title": "Lac De Saint Pardoux",
       "atNear": "lakes and rivers around",
-      "cover": {
+      "header": {
         "title": "Lac De Saint Pardoux",
         "para": "Lakes in and Around Haute Vienne and Limousin"
       }
@@ -232,7 +232,7 @@
     "lacDeVassivière": {
       "title": "Lac De Vassivière",
       "atNear": "lakes and rivers around",
-      "cover": {
+      "header": {
         "title": "Lac De Vassivière",
         "para": "Around Beaux Vue and Limousin"
       }
@@ -240,7 +240,7 @@
     "lacDuPontàLÂge": {
       "title": "Lac du Pont à l'Âge",
       "atNear": "lakes and rivers near",
-      "cover": {
+      "header": {
         "title": "Lac du Pont à l'Âge",
         "para": "Lakes near Beaux Vue, Haute Vienne and Limousin"
       }
@@ -248,7 +248,7 @@
     "laJonchèreSaintMaurice": {
       "title": "La Jonchère Saint Maurice",
       "atNear": "lakes and rivers near",
-      "cover": {
+      "header": {
         "title": "La Jonchère Saint Maurice Lac",
         "para": "Lakes in and Around Haute Vienne and Limousin"
       }
@@ -256,7 +256,7 @@
     "lakesAndRivers": {
       "title": "Lakes and Rivers",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Lakes and Rivers",
         "para": "Lakes and Rivers in and Around Haute Vienne, Limousin"
       }
@@ -264,7 +264,7 @@
     "leTaurionChatelusLeMarcheix": {
       "title": "Le Taurion Châtelus le Marcheix",
       "atNear": "rivers and lakes around",
-      "cover": {
+      "header": {
         "title": "Le Taurion",
         "para": "Châtelus le Marcheix, Limousin"
       }
@@ -272,7 +272,7 @@
     "leTaurionPontDuDognon": {
       "title": "Le Taurion",
       "atNear": "rivers and lakes in and Around",
-      "cover": {
+      "header": {
         "title": "Le Taurion",
         "para": "Pont du Dognon"
       }
@@ -280,7 +280,7 @@
     "local": {
       "title": "Local",
       "atNear": "in and around",
-      "cover": {
+      "header": {
         "title": "Around Beux Vue",
         "para": "Bersac sur Rivalier, Haute Vienne and Nouvelle Aquitaine, Limousin"
       }
@@ -288,7 +288,7 @@
     "marsac": {
       "title": "Étang De La Brousse",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Étang De La Brousse",
         "para": "Marsac, Nouvelle Aquitaine, Limousin"
       }
@@ -296,7 +296,7 @@
     "moreActivities": {
       "title": "More Activities",
       "atNear": "at, in and around",
-      "cover": {
+      "header": {
         "title": "More Activities",
         "para": "Even more to do with Beux Vuex"
       }
@@ -304,7 +304,7 @@
     "paragliding": {
       "title": "Paragliding",
       "atNear": "around",
-      "cover": {
+      "header": {
         "title": "Paragliding",
         "para": "Guides for Haute Vienne, Nouvelle Aquitaine and Limousin"
       }
@@ -312,7 +312,7 @@
     "saintSulpiceLauriereLake": {
       "title": "Saint Sulpice Laurière Lake",
       "atNear": "lakes and rivers in and around",
-      "cover": {
+      "header": {
         "title": "Saint Sulpice Laurière Lake",
         "para": "Lakes and rivers in and around Haute Vienne, Limousin"
       }
@@ -320,7 +320,7 @@
     "sup": {
       "title": "Stand UP Paddle (SUP)",
       "atNear": "SUP with Flying Water Sports Around",
-      "cover": {
+      "header": {
         "title": "Stand UP Paddle (SUP)",
         "para": "Stand UP Paddle lakes and rivers around Limousin"
       }
@@ -328,7 +328,7 @@
     "trekking": {
       "title": "Walks and hiking",
       "atNear": "around",
-      "cover": {
+      "header": {
         "title": "Trekking",
         "para": "Walks, Hikes and Trails around Limousin"
       }
@@ -336,7 +336,7 @@
     "vienne": {
       "title": "Vienne",
       "atNear": "Rivers and lakes near",
-      "cover": {
+      "header": {
         "title": "Vienne",
         "para": "Haute Vienne, Nouvelle Aquitaine and Limousin"
       }
@@ -344,7 +344,7 @@
     "waterSports": {
       "title": "Water Sports",
       "atNear": "with Flying Water Sports in and around",
-      "cover": {
+      "header": {
         "title": "Water Sports",
         "para": "With Flying Water Sports Haute Vienne, Nouvelle Aquitaine and Limousin"
       }
@@ -352,7 +352,7 @@
     "waterSportsRental": {
       "title": "Water Sports Rental",
       "atNear": "at",
-      "cover": {
+      "header": {
         "title": "Water Sports Rental",
         "para": "Equipment rental at Beaux Vue, Bersac Sur Ravalier, Haute Vienne, Limousin"
       }
@@ -360,7 +360,7 @@
     "windsurfing": {
       "title": "Windsurfing",
       "atNear": "at",
-      "cover": {
+      "header": {
         "title": "Windsurfing",
         "para": "With Flying Water Sports Haute Vienne, Nouvelle Aquitaine and Limousin"
       }
@@ -368,7 +368,7 @@
     "wingSurfing": {
       "title": "Wing Surfing and Foil",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Wing Surfing and Foil",
         "para": "With Flying Water Sports Haute Vienne, Nouvelle Aquitaine and Limousin"
       }
@@ -376,7 +376,7 @@
     "xmass": {
       "title": "Christmass Markets",
       "atNear": "near",
-      "cover": {
+      "header": {
         "title": "Beaux Vue",
         "para": "Luxury B&B Accomodation"
       }

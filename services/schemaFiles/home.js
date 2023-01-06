@@ -1,5 +1,5 @@
 module.exports = {
-  cover: {
+  header: {
     src: '/bersac chambres dhotes.jpg',
     textClass: 'home',
   },

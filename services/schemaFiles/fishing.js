@@ -1,7 +1,11 @@
 module.exports = {
-  cover: {
+  header: {
     src: '/bersac chambres dhotes.jpg',
     textClass: 'home',
+    breadCrumb: [
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Fishing' }
+    ]
   },
   cta: {
     minHeight: 150,
@@ -14,8 +18,5 @@ module.exports = {
       'moreActivities',
     ]
   },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Fishing' }
-  ]
+
 };

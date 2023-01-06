@@ -1,9 +1,19 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      link: '/lakes-and-rivers',
+      text: 'Lakes and Rivers'
+    }, {
+      text: 'Le Taurion, Châtelus le Marcheix'
+    }],
+    gallery: [],
     src: '',
-    textClass: 'le-taurion-pont-du-dognon',
+    textClass: 'le-taurion-pont-du-dognon'
   },
   cta: {
     minHeight: 135,
@@ -17,11 +27,6 @@ module.exports = {
     ]
   },
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Le Taurion, Châtelus le Marcheix' },
-    ],
     beach: true,
     cycling: true,
     fishing: true,
@@ -31,13 +36,11 @@ module.exports = {
     trekking: true,
     windsurfing: true,
     wingSurfAndFoil: true,
-    gallery: [
-    ],
+    para:
+      <>
+        <p>
+        </p>
+      </>
   },
 
-  para:
-    <>
-      <p>
-      </p>
-    </>
 };

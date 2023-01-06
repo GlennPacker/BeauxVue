@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 import CtaList from '../components/ctaList';
 import Cover from '../components/cover';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
 import data from '../services/dataService';
+import Header from '../components/header';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -23,13 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>{schema.pageTitle}</title>
-        <meta name="description" content={schema.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Cover data={schema.cover} />
+      <Header schema={schema.header} />
 
       <main className={styles.main}>
         <CtaList ctaData={schema.cta}></CtaList>

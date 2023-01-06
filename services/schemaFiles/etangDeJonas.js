@@ -1,7 +1,13 @@
 module.exports = {
-  cover: {
+  header: {
     src: '/lakes-and-rivers-france.jpg',
     textClass: 'lakes-and-rivers',
+    breadCrumb: [
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Etang De Jonas' },
+    ],
+    gallery: [],
   },
   cta: {
     minHeight: 135,
@@ -15,11 +21,6 @@ module.exports = {
     ]
   },
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Etang De Jonas' },
-    ],
     beach: false,
     cycling: false,
     fishing: true,
@@ -29,7 +30,6 @@ module.exports = {
     trekking: false,
     windsurfing: false,
     wingSurfAndFoil: false,
-    gallery: [],
     para:
       <>
         <p>

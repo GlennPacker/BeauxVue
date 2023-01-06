@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Button from './button';
-import styles from '../styles/Cta.module.css'
+import styles from '../styles/Cta.module.css';
 import Clickable from './clickable';
 import { useTranslations } from 'use-intl';
 
