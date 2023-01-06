@@ -1,47 +1,47 @@
 .infoPanel {
-    display: flex; /* or inline-flex */
-    flex-direction: column;
-    border: 1px solid #195f2b;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #195f2b;
 }
 
-.title { 
-    background-color: #195f2b;
-    color: white;
-    padding: 0.5rem;
-    padding-left: 1.5rem;
-    margin-block-start: 0em;
-    margin-block-end: 0em; 
- }
+.title {
+  background-color: #195f2b;
+  color: white;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
 
- .panel1 {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
- }
+.panel1 {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
- .infoTable,
- .text {
-    padding: 1rem;
- }
+.infoTable,
+.text {
+  padding: 1rem;
+}
 
- .panelContent {
-    display: flex;
-    justify-content: flex-start;
- }
+.panelContent {
+  display: flex;
+  justify-content: flex-start;
+}
 
- .panelContent1st {
-    display: flex;
-    flex-grow: 1;
-    
- }
+.panelContent1st {
+  display: flex;
+  flex-grow: 1;
 
- .map {
-    width: 33%;
- }
+}
+
+.map {
+  width: 33%;
+}
 
 .image {
-    width:33%;
+  width: 33%;
 }
 
 .image {
@@ -51,44 +51,45 @@
 }
 
 .mapLink {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (min-width: 671px) and (max-width: 1299px) {
-    .image,
-    .panel1 {
-        width: 50%;
-        justify-content: space-evenly;
-    }
 
-    .image {
-        max-height: 450px;
-    }
+  .image,
+  .panel1 {
+    width: 50%;
+    justify-content: space-evenly;
+  }
 
-    .map {
-        display: none;
-    }
+  .image {
+    max-height: 450px;
+  }
+
+  .map {
+    display: none;
+  }
 }
 
 
 @media (max-width: 670px) {
-    .panelContent {
-        flex-direction: column;
-    }
+  .panelContent {
+    flex-direction: column;
+  }
 
-    .map,
-    .image,
-    .panel1 {
-        width: 100%;
-        justify-content: space-evenly;
-    }
+  .map,
+  .image,
+  .panel1 {
+    width: 100%;
+    justify-content: space-evenly;
+  }
 
-    .map {
-        display: none;
-    }
+  .map {
+    display: none;
+  }
 
-    .image {
-        max-height: 450px;
-    }
+  .image {
+    max-height: 450px;
+  }
 }
