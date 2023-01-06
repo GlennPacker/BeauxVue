@@ -290,7 +290,7 @@
       "atNear": "near",
       "cover": {
         "title": "Étang De La Brousse",
-        "para": "Nouvelle Aquitaine, Limousin"
+        "para": "Marsac, Nouvelle Aquitaine, Limousin"
       }
     },
     "moreActivities": {
@@ -310,10 +310,10 @@
       }
     },
     "saintSulpiceLauriereLake": {
-      "title": "Saint Sulpice Laurière Lac",
+      "title": "Saint Sulpice Laurière Lake",
       "atNear": "lakes and rivers in and around",
       "cover": {
-        "title": "Saint Sulpice Laurière Lac",
+        "title": "Saint Sulpice Laurière Lake",
         "para": "Lakes and rivers in and around Haute Vienne, Limousin"
       }
     },
@@ -326,11 +326,11 @@
       }
     },
     "trekking": {
-      "title": "Trekking",
+      "title": "Walks and hiking",
       "atNear": "around",
       "cover": {
         "title": "Trekking",
-        "para": "Haute Vienne, Nouvelle Aquitaine and Limousin"
+        "para": "Walks, Hikes and Trails around Limousin"
       }
     },
     "vienne": {

@@ -5,34 +5,7 @@ import Cover from '../components/cover';
 import BreadCrumb from '../components/breadBrumb';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
-
-const data = {
-  cover: {
-    src: '/lakes-and-rivers-france.jpg',
-    textClass: 'lakes-and-rivers',
-  },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Lakes and Rivers' }
-  ],
-  cta: {
-    minHeight: 65,
-    items: [
-      'saintSulpiceLauriereLake',
-      'lacDuPont',
-      'gartempe',
-      'etangDeSagnat',
-      'lacDeSaintPardoux',
-      'leTaurionChatelusLeMarcheix',
-      'leTaurionPontDuDognon',
-      'laJonchèreSaintMaurice',
-      'etangDeJonas',
-      'etangDeLaBrousse',
-      'vienne',
-      'lacDeVassivière'
-    ]
-  }
-}
+import data from '../services/dataService';
 
 export async function getStaticProps({ locale }) {
   return {

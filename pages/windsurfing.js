@@ -5,29 +5,7 @@ import Cover from '../components/cover';
 import BreadCrumb from '../components/breadBrumb';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
-
-const data = {
-  cover: {
-    src: '/bersac chambres dhotes.jpg',
-    textClass: 'home',
-  },
-  cta: {
-    minHeight: 350,
-    items: [
-      'accomodation',
-      'local',
-      'lakesAndRivers',
-      'wingSurfing',
-      'kayaking',
-      'sup',
-    ]
-  },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Water Sports', link: '/watersports' },
-    { text: 'Windsurfing' },
-  ]
-}
+import data from '../services/dataService';
 
 export async function getStaticProps({ locale }) {
   return {
