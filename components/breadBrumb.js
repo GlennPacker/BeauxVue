@@ -1,5 +1,5 @@
 
-import styles from '../styles/breadCrumb.module.css'
+import styles from '../styles/breadCrumb.module.css';
 import Link from 'next/link';
 
 export default function BreadCrumb({ breadCrumb }) {

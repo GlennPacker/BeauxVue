@@ -1,7 +1,13 @@
 module.exports = {
-  cover: {
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      text: 'Paragliding'
+    }],
     src: '/bersac chambres dhotes.jpg',
-    textClass: 'home',
+    textClass: 'home'
   },
   cta: {
     minHeight: 150,
@@ -14,8 +20,4 @@ module.exports = {
       'moreActivities',
     ]
   },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Paragliding' }
-  ]
-}
+};

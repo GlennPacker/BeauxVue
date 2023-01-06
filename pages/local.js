@@ -1,14 +1,12 @@
-import Head from 'next/head'
 import styles from '../styles/local.module.css';
 import CtaList from '../components/ctaList';
-import Cover from '../components/cover';
-import BreadCrumb from '../components/breadBrumb';
 import InfoPanel from '../components/infoPanel';
 import { TagPicker } from 'rsuite';
 import { useState } from 'react';
 import { useTranslations } from 'use-intl';
 import pageService from '../services/pageService';
 import data from '../services/dataService';
+import Header from '../components/header';
 
 export async function getStaticProps({ locale }) {
   return {
@@ -46,15 +44,7 @@ export default function Local() {
 
   return (
     <>
-      <Head>
-        <title>{schema.pageTitle}</title>
-        <meta name="description" content={schema.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Cover data={schema.cover} />
-
-      <BreadCrumb breadCrumb={schema.breadCrumb} />
+      <Header schema={schema.header} />
 
       <div className="pageContainer">
         <div className="page">

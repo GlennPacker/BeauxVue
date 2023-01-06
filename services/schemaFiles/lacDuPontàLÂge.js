@@ -1,36 +1,14 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
     src: '/Lac Du Pont.jpg',
     textClass: 'lac-du-pont',
-  },
-  cta: {
-    items: [
-      'fishing',
-      'sup',
-      'kayaking',
-      'wingSurfing',
-      'windsurfing',
-      'trekking',
-    ],
-    minHeight: 135
-  },
-  lake: {
     breadCrumb: [
       { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
       { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
       { text: 'Lac Du Pont' },
     ],
-    beach: true,
-    cycling: true,
-    fishing: true,
-    inflatables: true,
-    kayaking: true,
-    swimming: true,
-    trekking: true,
-    windsurfing: true,
-    wingSurfAndFoil: true,
     gallery: [{
       src: '/Lac Du Pont - by kayak.jpg',
       alt: 'Lac Du Pont - by kayak'
@@ -52,8 +30,29 @@ module.exports = {
     }, {
       src: '/Lac Du Pont - water sports.jpg',
       alt: 'Lac Du Pont',
-    },
+    }],
+  },
+  cta: {
+    items: [
+      'fishing',
+      'sup',
+      'kayaking',
+      'wingSurfing',
+      'windsurfing',
+      'trekking',
     ],
+    minHeight: 135
+  },
+  lake: {
+    beach: true,
+    cycling: true,
+    fishing: true,
+    inflatables: true,
+    kayaking: true,
+    swimming: true,
+    trekking: true,
+    windsurfing: true,
+    wingSurfAndFoil: true,
     para:
       <>
       </>

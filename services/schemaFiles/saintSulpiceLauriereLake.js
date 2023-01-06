@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
-    src: '/Saint-Sulpice-Laurière-Lac.jpg',
-    textClass: 'saint-sulpice-lauriere',
-  },
   cta: {
     minHeight: 135,
     items: [
@@ -16,12 +12,42 @@ module.exports = {
       'trekking',
     ]
   },
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      link: '/lakes-and-rivers',
+      text: 'Lakes and Rivers'
+    }, {
+      text: 'Saint Sulpice Laurière'
+    }],
+    gallery: [{
+      alt: 'Saint Sulpice Laurière - Fishing Lake',
+      src: '/Saint Sulpice Laurière - fishing lake.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière, Laurière, Haute Vienne',
+      src: '/Saint Sulpice Laurière Laurière Haute Vienne.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière Lac, Beaux Vuex',
+      src: '/Saint Sulpice Laurière - Beaux Vuex.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière - Near Beaux Vue',
+      src: '/Saint Sulpice Laurière - Near Beaux Vue.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière - Pêche Lac',
+      src: '/Saint Sulpice Laurière - pêche lac.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière',
+      src: '/Saint-Sulpice-Laurière.jpg'
+    }, {
+      alt: 'Saint Sulpice Laurière - Fishing Bank.jpg',
+      src: '/Saint Sulpice Laurière - fishing bank.jpg'
+    }],
+    src: '/Saint-Sulpice-Laurière-Lac.jpg',
+    textClass: 'saint-sulpice-lauriere'
+  },
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Saint Sulpice Laurière' },
-    ],
     beach: false,
     cycling: false,
     fishing: true,
@@ -31,29 +57,6 @@ module.exports = {
     trekking: false,
     windsurfing: false,
     wingSurfAndFoil: false,
-    gallery: [{
-      src: '/Saint Sulpice Laurière - fishing lake.jpg',
-      alt: 'Saint Sulpice Laurière - Fishing Lake',
-    }, {
-      alt: 'Saint Sulpice Laurière, Laurière, Haute Vienne',
-      src: '/Saint Sulpice Laurière Laurière Haute Vienne.jpg',
-    }, {
-      alt: 'Saint Sulpice Laurière Lac, Beaux Vuex',
-      src: '/Saint Sulpice Laurière - Beaux Vuex.jpg',
-    }, {
-      src: '/Saint Sulpice Laurière - Near Beaux Vue.jpg',
-      alt: 'Saint Sulpice Laurière - Near Beaux Vue',
-    }, {
-      src: '/Saint Sulpice Laurière - pêche lac.jpg',
-      alt: 'Saint Sulpice Laurière - Pêche Lac',
-    }, {
-      src: '/Saint-Sulpice-Laurière.jpg',
-      alt: 'Saint Sulpice Laurière',
-    }, {
-      src: '/Saint Sulpice Laurière - fishing bank.jpg',
-      alt: 'Saint Sulpice Laurière - Fishing Bank.jpg',
-    }
-    ],
     para:
       <>
         <h6>Fishing on the pond La Papeterie</h6>

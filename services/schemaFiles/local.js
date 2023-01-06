@@ -2,9 +2,15 @@ import Clickable from '../../components/clickable';
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      text: 'Local'
+    }],
     src: '/bersac chambres dhotes.jpg',
-    textClass: 'home',
+    textClass: 'home'
   },
   cta: {
     minHeight: 150,
@@ -321,8 +327,4 @@ module.exports = {
     `
 
     }],
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Local' }
-  ]
 }

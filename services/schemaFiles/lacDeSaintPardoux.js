@@ -1,36 +1,14 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
     src: '/Lac De Saint Pardoux.jpg',
     textClass: 'lac-de-saint-pardoux',
-  },
-  cta: {
-    items: [
-      'fishing',
-      'sup',
-      'kayaking',
-      'wingSurfing',
-      'windsurfing',
-      'trekking',
-    ],
-    minHeight: 135
-  },
-  lake: {
     breadCrumb: [
       { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
       { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
       { text: 'Lac De Saint Pardoux' },
     ],
-    beach: true,
-    cycling: true,
-    fishing: true,
-    inflatables: true,
-    kayaking: true,
-    swimming: true,
-    trekking: true,
-    windsurfing: true,
-    wingSurfAndFoil: true,
     gallery: [{
       src: '/Lac De Saint Pardoux - by fishing car park.jpg',
       alt: 'Lac De Saint Pardoux - by fishing car park'
@@ -52,8 +30,29 @@ module.exports = {
     }, {
       src: '/lac saint pardoux.jpg',
       alt: 'Lac De Saint Pardoux - through trees'
-    },
+    }],
+  },
+  cta: {
+    items: [
+      'fishing',
+      'sup',
+      'kayaking',
+      'wingSurfing',
+      'windsurfing',
+      'trekking',
     ],
+    minHeight: 135
+  },
+  lake: {
+    beach: true,
+    cycling: true,
+    fishing: true,
+    inflatables: true,
+    kayaking: true,
+    swimming: true,
+    trekking: true,
+    windsurfing: true,
+    wingSurfAndFoil: true,
     para:
       <>
         <p>

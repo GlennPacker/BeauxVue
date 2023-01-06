@@ -1,23 +1,18 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
-    src: '/bersac chambres dhotes.jpg',
-    textClass: 'home',
-  },
   cta: {
-    minHeight: 150,
-    items: [
-      'accomodation',
-      'local',
-      'lakesAndRivers',
-      'watersports',
-      'trekking',
-      'moreActivities',
-    ]
+    items: ['accomodation', 'local', 'lakesAndRivers', 'watersports', 'trekking', 'moreActivities'],
+    minHeight: 150
   },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Paragliding' }
-  ]
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      text: 'Paragliding'
+    }],
+    src: '/bersac chambres dhotes.jpg',
+    textClass: 'home'
+  }
 };

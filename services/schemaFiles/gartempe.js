@@ -1,7 +1,22 @@
 module.exports = {
-  cover: {
+  header: {
     src: '/Gartempe.jpg',
     textClass: 'gartempe',
+    breadCrumb: [
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Gartempe' },
+    ],
+    gallery: [{
+      alt: 'Gartempe, Haute Vienne',
+      src: '/Gartempe, Haute Vienne.jpg',
+    }, {
+      src: '/Gartempe - Near Beaux Vue.jpg',
+      alt: 'Gartempe - Near Beaux Vue',
+    }, {
+      src: '/Gartempe - by flying water sports.jpg',
+      alt: 'Gartempe - by flying water sports'
+    }],
   },
   cta: {
     minHeight: 135,
@@ -15,11 +30,6 @@ module.exports = {
     ]
   },
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Gartempe' },
-    ],
     beach: false,
     cycling: true,
     fishing: true,
@@ -29,17 +39,7 @@ module.exports = {
     trekking: true,
     windsurfing: false,
     wingSurfAndFoil: false,
-    gallery: [{
-      alt: 'Gartempe, Haute Vienne',
-      src: '/Gartempe, Haute Vienne.jpg',
-    }, {
-      src: '/Gartempe - Near Beaux Vue.jpg',
-      alt: 'Gartempe - Near Beaux Vue',
-    }, {
-      src: '/Gartempe - by flying water sports.jpg',
-      alt: 'Gartempe - by flying water sports'
-    },
-    ],
+
     para:
       <>
         <p>

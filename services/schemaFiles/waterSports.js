@@ -1,23 +1,18 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      text: 'Water Sports'
+    }],
     src: '/Watersports Haute Vienne and Nouvelle Aquitaine.jpg',
-    textClass: 'watersports',
+    textClass: 'watersports'
   },
-  breadCrumb: [
-    { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-    { text: 'Water Sports' }
-  ],
   cta: {
-    items: [
-      'lakesAndRivers',
-      'waterSportsRental',
-      'sup',
-      'kayaking',
-      'wingSurfing',
-      'windsurfing',
-    ],
+    items: ['lakesAndRivers', 'waterSportsRental', 'sup', 'kayaking', 'wingSurfing', 'windsurfing'],
     minHeight: 135
   }
 };

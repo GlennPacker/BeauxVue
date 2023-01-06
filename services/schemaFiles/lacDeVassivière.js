@@ -1,9 +1,15 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
     src: '/Lac De Vassivière Creuse.jpg',
     textClass: 'vassiviere',
+    breadCrumb: [
+      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
+      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
+      { text: 'Lac De Vassivière' },
+    ],
+    gallery: [],
   },
   cta: {
     items: [
@@ -17,11 +23,6 @@ module.exports = {
     minHeight: 135
   },
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Lac De Vassivière' },
-    ],
     beach: false,
     cycling: true,
     fishing: true,
@@ -31,7 +32,6 @@ module.exports = {
     trekking: true,
     windsurfing: true,
     wingSurfAndFoil: true,
-    gallery: [],
     para:
       <>
         <p>

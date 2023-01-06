@@ -1,9 +1,18 @@
 import Link from 'next/link';
 
 module.exports = {
-  cover: {
+  header: {
+    breadCrumb: [{
+      link: '/',
+      text: `Beaux Vue, Chambres d'Hotes`
+    }, {
+      link: '/lakes-and-rivers',
+      text: 'Lakes and Rivers'
+    }, {
+      text: 'Étang de la Brousse'
+    }],
     src: '/Étang de la Brousse Haute Vienne.jpg',
-    textClass: 'etang-de-la-brousse',
+    textClass: 'etang-de-la-brousse'
   },
   cta: {
     items: [
@@ -16,12 +25,8 @@ module.exports = {
     ],
     minHeight: 135
   },
+  gallery: [],
   lake: {
-    breadCrumb: [
-      { text: `Beaux Vue, Chambres d'Hotes`, link: '/' },
-      { text: 'Lakes and Rivers', link: '/lakes-and-rivers' },
-      { text: 'Étang de la Brousse' },
-    ],
     beach: false,
     cycling: false,
     fishing: true,
@@ -31,7 +36,6 @@ module.exports = {
     trekking: false,
     windsurfing: false,
     wingSurfAndFoil: false,
-    gallery: [],
     para:
       <>
       </>
